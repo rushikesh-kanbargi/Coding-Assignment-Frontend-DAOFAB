@@ -1,0 +1,27 @@
+<!-- child.component.html -->
+<div class="container">
+    <h2 class="header">Child Transactions</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Child ID</th>
+                <th>Sender</th>
+                <th>Receiver</th>
+                <th>Total Amount</th>
+                <th>Paid Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let child of childData">
+                <td>{{ child.id }}</td>
+                <td>{{ sender }}</td>
+                <td>{{ receiver }}</td>
+                <td>{{ totalAmount }}</td>
+                <td>{{ child.paidAmount }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="no-data" *ngIf="noData"><span></span><b>No Data Found</b></div>
+    <a  routerLink="/parent-transactions" class="back-button">Back to Parent Transactions</a>
+        
+</div>

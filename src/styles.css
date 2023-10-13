@@ -1,0 +1,183 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.header {
+  color: #333;
+  font-size: 24px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.child-link {
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.back-button {
+  border-radius: 30px;
+  background-color: #5ca1e1;
+  border: none;
+  color: #fff;
+  text-align: center;
+  padding: 6px 12px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 15px;
+  box-shadow: 0 7px 15px -8px rgba(0, 0, 0,.7);
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.back-button:after {
+  content: '«';
+  position: absolute;
+  opacity: 0;
+  top: 5px;
+  left: -15px;
+  transition: 0.5s;
+}
+
+.back-button:hover {
+  padding-right: 8px;
+  padding-left: 17px;
+}
+
+.back-button:hover:after {
+  opacity: 1;
+  left: 10px;
+}
+
+
+.previous-button, .next-button {
+  border-radius: 30px;
+  background-color: #5ca1e1;
+  border: none;
+  color: #fff;
+  text-align: center;
+  padding: 6px 12px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 15px;
+  box-shadow: 0 7px 15px -8px rgba(0, 0, 0,.7);
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.previous-button:after {
+  content: '«';
+  position: absolute;
+  opacity: 0;
+  top: 6px;
+  left: -20px;
+  transition: 0.5s;
+}
+
+.next-button:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 6px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.previous-button:hover {
+  padding-right: 8px;
+  padding-left: 15px;
+}
+
+.next-button:hover {
+  padding-right: 15px;
+  padding-left: 8px;
+}
+
+.previous-button:hover:after {
+  opacity: 1;
+  left: 8px;
+}
+
+.next-button:hover:after {
+  opacity: 1;
+  right: 8px;
+}
+
+
+.p1 {
+  padding: 10px;
+}
+
+.no-data {
+  padding: 20px;
+  color: red;
+}
+
+.sort {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 16px;
+  width: 200px;
+}
+
+
+.total-paid-amount-button {
+  border-radius: 20px;
+  background-color: #5ca1e1;
+  border: none;
+  color: #fff;
+  text-align: center;
+  padding: 6px 12px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-left: 15px;
+  box-shadow: 0 7px 15px -8px rgba(0, 0, 0,.7);
+}
+
+.total-paid-amount-button {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.total-paid-amount-button:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 5px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.total-paid-amount-button:hover {
+  padding-right: 24px;
+  padding-left:8px;
+}
+
+.total-paid-amount-button:hover:after {
+  opacity: 1;
+  right: 10px;
+}

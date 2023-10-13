@@ -1,0 +1,43 @@
+<!-- parent.component.html -->
+<div class="container">
+  <div>
+    <select class="sort" [(ngModel)]="sortBy" (change)="changeSort(sortBy)">
+      <option value="id">Sort by ID</option>
+      <option value="sender">Sort by Sender</option>
+      <option value="receiver">Sort by Receiver</option>
+      <option value="totalAmount">Sort by Total Amount</option>
+    </select>
+  </div>
+  <h2 class="header">Parent Transactions</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Parent ID</th>
+        <th>Sender</th>
+        <th>Receiver</th>
+        <th>Total Amount</th>
+        <th>Total Paid Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let parent of parentData">
+        <td>{{ parent.id }}</td>
+        <td>{{ parent.sender }}</td>
+        <td>{{ parent.receiver }}</td>
+        <td>{{ parent.totalAmount }}</td>
+        <td>{{ parent.totalPaidAmount }}
+          <a class="child-link" (click)="showChildData(parent.id, parent.sender, parent.receiver, parent.totalAmount)"
+            class="total-paid-amount-button">check Instalments
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <button class="previous-button" [disabled]="currentPage === 1" *ngIf="!(currentPage === 1)"
+      (click)="changePage(currentPage - 1)">«</button>
+    <span class="p1">{{ currentPage }} / {{ totalPages }}</span>
+    <button class="next-button" [disabled]="currentPage === totalPages" *ngIf="!(currentPage === totalPages)"
+      (click)="changePage(currentPage + 1)">»</button>
+  </div>
+</div>
